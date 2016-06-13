@@ -14,13 +14,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         senderwindow.cpp \
-    helpdialog.cpp
+    helpdialog.cpp \
+    selectfile.cpp
 
 HEADERS  += senderwindow.h \
-    helpdialog.h
+    helpdialog.h \
+    selectfile.h
 
 FORMS    += senderwindow.ui \
-    helpdialog.ui
+    helpdialog.ui \
+    selectfile.ui
 
 RESOURCES += \
     resources.qrc
