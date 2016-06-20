@@ -40,7 +40,7 @@ private:
     QFileSystemModel * dirmodel; //display folders
     QFileSystemModel * filemodel; //display files
 
-    static QString * filePath;
+    static QString filePath;
 };
 
 #endif // SELECTFILE_H

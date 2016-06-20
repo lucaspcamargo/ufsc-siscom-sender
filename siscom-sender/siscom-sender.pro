@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += network #for sockets connection
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,11 +16,15 @@ TEMPLATE = app
 SOURCES += main.cpp\
         senderwindow.cpp \
     helpdialog.cpp \
-    selectfile.cpp
+    selectfile.cpp \
+    udpclass.cpp \
+    tcpsocket.cpp
 
 HEADERS  += senderwindow.h \
     helpdialog.h \
-    selectfile.h
+    selectfile.h \
+    udpclass.h \
+    tcpsocket.h
 
 FORMS    += senderwindow.ui \
     helpdialog.ui \

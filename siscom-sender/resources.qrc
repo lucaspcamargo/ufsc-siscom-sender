@@ -1,7 +1,5 @@
 <RCC>
     <qresource prefix="/res">
         <file>graphics/ufsc.svg</file>
-        <file>graphics/help-about.svg</file>
-        <file>graphics/mail-send.svg</file>
     </qresource>
 </RCC>

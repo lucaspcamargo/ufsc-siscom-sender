@@ -2,7 +2,7 @@
 #include "ui_selectfile.h"
 #include "senderwindow.h"
 
-QString * SelectFile::filePath;
+QString SelectFile::filePath;
 
 SelectFile::SelectFile(QWidget *parent) :
     QDialog(parent),
@@ -11,7 +11,7 @@ SelectFile::SelectFile(QWidget *parent) :
 
     ui->setupUi(this);
 
-    //QString sPath = "/home/rlove/QT_PROJECTS/";
+    //QString sPath = "/home/rlove/QT_PROJECTS";
     //qDebug()<<sPath;
     dirmodel = new QFileSystemModel(this);
     dirmodel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs); //nao mostrar arquivos
@@ -46,8 +46,6 @@ void SelectFile::on_buttonBox_accepted()
 void SelectFile::on_buttonBox_rejected()
 {
     //cancel button
-    delete filePath;
-    filePath = 0;
     this->close();
 }
 
@@ -61,6 +59,5 @@ void SelectFile::on_treeView_clicked(const QModelIndex &index)
 void SelectFile::on_listView_clicked(const QModelIndex &index)
 {
     //when clicking in a node on the files tree
-    delete filePath;
-    filePath = new QString(filemodel->fileInfo(index).absoluteFilePath());
+    filePath = QString(filemodel->fileInfo(index).absoluteFilePath());
 }
